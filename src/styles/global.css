@@ -9,3 +9,7 @@
 
     font-family: "Roboto", serif;
 }
+
+p, span, h1, h2, h3, h4{
+    cursor: default;
+}

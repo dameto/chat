@@ -7,7 +7,7 @@ export default function ChatPage() {
       {/* Sidebar */}
       <div className="w-[25%] h-full bg-white/[0.01] flex flex-col gap-2 p-2">
         {/* Search */}
-        <div className="bg-gradient-to-r from-[#a6a6a6]/[0.01] to-[#0e0e0f] rounded-[20px] p-2 flex flex-row justify-between items-center gap-2">
+        <div className="bg-[#a6a6a6]/[0.03] rounded-[20px] p-2 flex flex-row justify-between items-center gap-2">
           <div className="flex flex-row justify-between items-center gap-2 w-full">
             <span className="flex items-center justify-center">
               <svg
@@ -32,7 +32,7 @@ export default function ChatPage() {
             />
           </div>
 
-          <button className="text-green-600/60 h-[35px] w-[35px] bg-gradient-to-r from-[#a6a6a6]/[0.025] to-[#0e0e0f] rounded-[20px] flex justify-center items-center cursor-pointer  hover:text-green-600/90 hover:from-[#a6a6a6]/[0.05] duration-200">
+          <button className="text-green-600/60 h-[35px] w-[35px] rounded-[20px] flex justify-center items-center cursor-pointer  bg-[#a6a6a6]/[0.025] hover:bg-[#a6a6a6]/[0.04] active:bg-[#a6a6a6]/[0.03]  hover:text-green-600/90">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -52,29 +52,31 @@ export default function ChatPage() {
 
         {/* ChatList */}
         <div className="flex gap-2 flex-col h-full">
-          <li className="flex flex-row gap-[10px] justify-between p-2 pr-[14px] rounded-[20px] bg-gradient-to-r from-[#3F3F3F]/[0.15] to-[#404040]/[0.15]">
+          <li className="flex flex-row gap-[10px] justify-between p-2 pr-[14px] rounded-[20px] bg-gradient-to-r bg-[#404040]/[0]  cursor-pointer  hover:bg-[#a6a6a6]/[0.03]  ">
             <div className="flex flex-row gap-[10px]">
               {/* pic */}
               <div className="w-[45px] h-[45px] bg-cover bg-center bg-no-repeat bg-[url('https://media.istockphoto.com/id/1335941248/photo/shot-of-a-handsome-young-man-standing-against-a-grey-background.jpg?s=612x612&w=0&k=20&c=JSBpwVFm8vz23PZ44Rjn728NwmMtBa_DYL7qxrEWr38=')] rounded-full"></div>
 
               {/* text */}
               <div className="flex flex-col justify-center items-start">
-                <h1 className="text-[15px] font-semibold text-white leading-5">
+                <h1 className="text-[15px] cursor-pointer font-semibold text-white leading-5">
                   Joe Smith
                 </h1>
-                <p className="text-[15px] font-normal text-white/[.15] leading-5">
+                <p className="text-[15px] cursor-pointer font-normal text-white/[.15] leading-5">
                   Lorem ipsum dolor sit ame...
                 </p>
               </div>
             </div>
 
             {/* time */}
-            <span className="text-[#B3B3B3] text-[13px]">12:32 AM</span>
+            <span className="text-[#B3B3B3] cursor-pointer text-[13px]">
+              12:32 AM
+            </span>
           </li>
         </div>
 
         {/* Current User */}
-        <div className="flex justify-self-end flex-row gap-[10px] justify-between items-center p-2 pr-[14px] rounded-[20px] bg-gradient-to-r from-[#3F3F3F]/[0.15] to-[#404040]/[0.15]">
+        <div className="flex justify-self-end flex-row gap-[10px] justify-between items-center p-2 pr-[14px] rounded-[20px] bg-[#a6a6a6]/[0.025] ">
           <div className="flex flex-row gap-[10px]">
             {/* pic */}
             <div className="w-[55px] h-[55px] bg-cover bg-center bg-no-repeat bg-[url('https://media.istockphoto.com/id/1335941248/photo/shot-of-a-handsome-young-man-standing-against-a-grey-background.jpg?s=612x612&w=0&k=20&c=JSBpwVFm8vz23PZ44Rjn728NwmMtBa_DYL7qxrEWr38=')] rounded-full"></div>
@@ -98,7 +100,7 @@ export default function ChatPage() {
           </div>
 
           {/* settings */}
-          <button className="text-white/40 h-[35px] w-[35px] bg-gradient-to-r from-[#a6a6a6]/[0.025] to-[#0e0e0f] rounded-[20px] flex justify-center items-center cursor-pointer  hover:text-white/70 hover:from-[#a6a6a6]/[0.05] duration-200">
+          <button className="text-white/40 h-[35px] w-[35px] rounded-[20px] flex justify-center items-center cursor-pointer  hover:text-white/70 bg-[#a6a6a6]/[0.025] hover:bg-[#a6a6a6]/[0.04] active:bg-[#a6a6a6]/[0.03] ">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -122,18 +124,19 @@ export default function ChatPage() {
         </div>
       </div>
 
+      {/* Chat */}
       <div className="w-[75%] h-full bg-white/[0.01] flex flex-col gap-2 p-2">
-        {/* Chat Name */}
-        <div className="flex flex-row gap-[10px] justify-start p-[14px] rounded-[20px] bg-gradient-to-r from-[#a6a6a6]/[0.01] to-[#0e0e0f]">
+        {/* Current Chat */}
+        <div className="flex flex-row gap-[10px] justify-start p-[14px] rounded-[20px] bg-[#a6a6a6]/[0.025] cursor-pointer hover:bg-[#a6a6a6]/[0.04] active:bg-[#a6a6a6]/[0.03] ">
           {/* pic */}
           <div className="w-[45px] h-[45px] bg-cover bg-center bg-no-repeat bg-[url('https://media.istockphoto.com/id/1335941248/photo/shot-of-a-handsome-young-man-standing-against-a-grey-background.jpg?s=612x612&w=0&k=20&c=JSBpwVFm8vz23PZ44Rjn728NwmMtBa_DYL7qxrEWr38=')] rounded-full"></div>
 
           {/* text */}
           <div className="flex flex-col justify-center items-start">
-            <h1 className="text-[15px] font-semibold text-white leading-5">
+            <h1 className="text-[15px] font-semibold text-white leading-5 cursor-pointer">
               Joe Smith
             </h1>
-            <p className="text-[15px] font-normal text-white/[.15] leading-5">
+            <p className="text-[15px] font-normal text-white/[.15] leading-5 cursor-pointer">
               @joesmith
             </p>
           </div>
@@ -147,7 +150,7 @@ export default function ChatPage() {
               @johndoe <span>•</span>
               <span className="text-white/50">12:01 AM</span>
             </span>
-            <p className="px-[20px] py-[14px] text-white bg-gradient-to-r from-[#3F3F3F]/[0.15] to-[#404040]/[0.15] rounded-[25px] w-max max-w-[50%]">
+            <p className="px-[20px] py-[14px] text-white bg-[#a6a6a6]/[0.025] rounded-[25px] w-max max-w-[50%]">
               hey, joe! I’m writing because I’ve had a brand new phone
             </p>
           </div>
@@ -157,16 +160,16 @@ export default function ChatPage() {
             <span className="text-[15px] flex flex-row gap-[6px] leading-5 align-middle pr-2 text-white/50">
               12:01 AM
             </span>
-            <p className="px-[20px] py-[14px] text-white bg-gradient-to-r from-[#1678E8]/[0.15] to-[#1A4677]/[0.15] rounded-[25px] w-max max-w-[50%]">
+            <p className="px-[20px] py-[14px] text-white bg-[#1678E8]/[0.1] rounded-[25px] w-max max-w-[50%]">
               hey, john! I’d be happy to
             </p>
           </div>
         </div>
 
         {/* Message Input */}
-        <div className="bg-gradient-to-r from-[#a6a6a6]/[0.01] to-[#0e0e0f] rounded-[20px] p-2 flex flex-row justify-between items-center gap-2">
+        <div className="bg-[#a6a6a6]/[0.025]  rounded-[20px] p-2 flex flex-row justify-between items-center gap-2">
           <div className="flex flex-row justify-between items-center gap-2 w-full">
-            <button className="text-[#616169]/60 h-[35px] w-[35px] bg-gradient-to-r from-[#a6a6a6]/[0.025] to-[#0e0e0f] rounded-[20px] flex justify-center items-center cursor-pointer  hover:text-[#616169]/90 hover:from-[#a6a6a6]/[0.05] duration-200">
+            <button className="text-[#616169]/60 h-[35px] w-[35px] rounded-[20px] flex justify-center items-center cursor-pointer  hover:text-[#616169]/90  bg-[#a6a6a6]/[0.025] hover:bg-[#a6a6a6]/[0.04] active:bg-[#a6a6a6]/[0.03]">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -189,7 +192,7 @@ export default function ChatPage() {
             />
           </div>
 
-          <button className="text-red-600/60 h-[35px] w-[35px] bg-gradient-to-r from-[#a6a6a6]/[0.025] to-[#0e0e0f] rounded-[20px] flex justify-center items-center cursor-pointer  hover:text-red-600/90 hover:from-[#a6a6a6]/[0.05] duration-200">
+          <button className="text-red-600/60 h-[35px] w-[35px] bg-[#a6a6a6]/[0.025]  rounded-[20px] flex justify-center items-center cursor-pointer  hover:bg-[#a6a6a6]/[0.04] active:bg-[#a6a6a6]/[0.03] hover:text-red-600/90 ">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
