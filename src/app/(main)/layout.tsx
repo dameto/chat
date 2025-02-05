@@ -3,5 +3,5 @@ export default function MainLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return <div className="h-full">{children}</div>;
+  return <div>{children}</div>;
 }
